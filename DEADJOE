@@ -1,3 +1,8 @@
+
+*** These modified files were found in JOE when it aborted on Fri Feb 24 10:57:22 2017
+*** JOE was aborted because the terminal closed
+
+*** File 'etusivu.php'
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -6,11 +11,7 @@
 <title>Foundation | Welcome</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
-<style>
-h5 {
-  text-align: center;
-}
-</style>
+ 
 </head>
 <body>
  
@@ -37,7 +38,7 @@ h5 {
 <div class="row">
 <div class="medium-4 columns">
 <img src="https://placehold.it/450x183&text=LOGO" alt="company logo">
-
+<h2>
 </div>
 <div class="medium-8 columns">
 <img src="https://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
@@ -113,3 +114,35 @@ h5 {
 <script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
 </body>
 </html>
+
+*** File '(Unnamed)'
+d
+
+*** File '(Unnamed)'
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+/home/eetueloranta/public_html/naytto4/.git/MERGE_MSG
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
