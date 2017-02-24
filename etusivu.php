@@ -29,23 +29,7 @@
 <style>.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}</style>
 <header>
  
-<div class="top-bar">
-<div class="top-bar-left">
-<ul class="menu">
-<li><a href="#">One</a></li>
-<li><a href="#">Two</a></li>
-<li><a href="#">Three</a></li>
-<li><a href="#">Four</a></li>
-</ul>
-</div>
-<div class="top-bar-right">
-<ul class="menu">
-<li><input type="search" placeholder="Search"></li>
-<li><button type="button" class="button">Search</button></li>
-</ul>
-</div>
-</div>
- 
+
  
 <div class="row">
 <div class="medium-4 columns">
@@ -144,20 +128,6 @@
 <div class="large-4 columns">
 <h5>RANDOM MAG</h5>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quam voluptatum vel repellat ab similique molestias molestiae ea omnis eos, id asperiores est praesentium, voluptate officia nulla aspernatur sequi aliquam.</p>
-</div>
-</div>
-<div class="row expanded">
-<div class="medium-6 columns">
-<ul class="menu">
-<li><a href="#">Legal</a></li>
-<li><a href="#">Partner</a></li>
-<li><a href="#">Explore</a></li>
-</ul>
-</div>
-<div class="medium-6 columns">
-<ul class="menu align-right">
-<li class="menu-text">Copyright © 2099 Random Mag</li>
-</ul>
 </div>
 </div>
 </footer>
