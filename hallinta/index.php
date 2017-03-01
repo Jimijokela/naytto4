@@ -1,3 +1,6 @@
+<?php
+  include("config.php");
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -13,9 +16,9 @@ h5 {
 </style>
 </head>
 <body>
- 
- 
- 
+
+
+
 <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,10 +33,11 @@ h5 {
 
     </script>
 <style>.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}</style>
+
 <header>
- 
+
 <br>
- 
+
 <div class="row">
 <div class="medium-4 columns">
 <img src="https://placehold.it/450x183&text=LOGO" alt="company logo">
@@ -43,7 +47,7 @@ h5 {
 <img src="https://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
 </div>
 </div>
- 
+
 <br>
 
 <h5>Bonsai-kauppa</h5>
@@ -54,13 +58,16 @@ h5 {
 </div>
 <div class="top-bar" id="main-menu">
 <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
-<li><a href="etusivu.php">Tuotesivu</a>
+<li><a href="">Lisää tietoa</a>
 
 </li>
-<li><a href="tietoa.php">Tietoa Meistä</a>
+<li><a href="">Poista tietoja</a>
 
 </li>
-<li><a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/naytto4/naytto4/hallinta/login.php">Hallinta</a>
+<li><a href="">Muokkaa tietoja</a>
+
+</li>
+<li><a href="?kill=user">Kirjaudu ulos</a>
 
 </li>
 </ul>
@@ -68,7 +75,7 @@ h5 {
 </header>
 
 <article>
-<br><br><br>
+<br>
 </article>
 
 </div>
