@@ -58,24 +58,24 @@ h5 {
 </div>
 <div class="top-bar" id="main-menu">
 <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
-<li><a href="">Lisää tietoa</a>
+<li><a href="index.php">Poista tietoja</a>
 
 </li>
-<li><a href="">Poista tietoja</a>
+<li><a href="poista.php">Ostohistoriaa</a>
 
 </li>
-<li><a href="">Muokkaa tietoja</a>
-
-</li>
-<li><a href="?kill=user">Kirjaudu ulos</a>
+<li><a style="color: green" href="?kill=user">Kirjaudu ulos</a>
 
 </li>
 </ul>
 </div>
 </header>
 
-<article>
+<article style="text-align:center">
 <br>
+<h1>Testi</h1>
+
+
 </article>
 
 </div>
