@@ -92,7 +92,7 @@ table {
   </tr>
   <tr>
 <td>Osoite</td>
-<td>Budhakatu 2</td>
+<td>Ajurintie 2</td>
   </tr>
   <tr>
 <td>Postinumero</td>
@@ -103,7 +103,13 @@ table {
 <td>Puh: 06-877 679, 040-7771234</td>
   </tr>
 </table>
-<br><br>
+<br>
+<div>
+<div class="art-layout-cell" style="padding: 20px; width: 45%;"><iframe
+src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=..." width="400" height="300" style="border: 0;"></iframe></div>
+</div>
+
+<br>
 </article>
 
 <footer>

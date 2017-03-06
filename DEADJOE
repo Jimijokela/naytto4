@@ -375,3 +375,34 @@ Processing '/etc/joe/joerc'...
 Processing '/etc/joe/ftyperc'...
 Finished processing /etc/joe/ftyperc
 Finished processing /etc/joe/joerc
+
+*** These modified files were found in JOE when it aborted on Mon Mar  6 11:18:55 2017
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+tietoa.php
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
