@@ -10,12 +10,15 @@
 h5 {
   text-align: center;
 }
+h1 {
+  text-align: center;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
 </style>
-</head>
-<body>
-
-
-
 <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,7 +33,11 @@ h5 {
 
     </script>
 <style>.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}</style>
+
+</head>
+<body>
 <header>
+
 
 <br>
 
@@ -40,7 +47,7 @@ h5 {
 
 </div>
 <div class="medium-8 columns">
-<img src="https://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
+<img src="https://placehold.it/900x175&text=Responsive_Ads_-_ZURB_Playground/333" alt="advertisement for deep fried Twinkies">
 </div>
 </div>
 
@@ -73,6 +80,7 @@ h5 {
 <table>
   <tr>
 <th>Yhteystiedot</th>
+<th></th>
   </tr>
   <tr>
 <td>Omistaja</td>
@@ -92,14 +100,12 @@ h5 {
   </tr>
   <tr>
 <td>Puhelin</td>
-<td>Puh: 06-877 679, 040-6661234</td>
+<td>Puh: 06-877 679, 040-7771234</td>
   </tr>
 </table>
 <br><br>
 </article>
 
-</div>
-</div>
 <footer>
 <div class="row expanded callout secondary">
 <div class="large-4 columns">
