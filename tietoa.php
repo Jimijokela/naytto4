@@ -100,7 +100,7 @@ table {
   </tr>
   <tr>
 <td>Puhelin</td>
-<td>Puh: 06-877 679, 040-6661234</td>
+<td>Puh: 06-877 679, 040-7771234</td>
   </tr>
 </table>
 <br><br>
