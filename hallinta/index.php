@@ -1,7 +1,33 @@
 <?php
   include("config.php");
+
+  $send = $_POST['send'];
+  $kayttaja = $_POST['kayttaja'];
+
+  if($send=='true') {
+
+   $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+   if($my->mysql_errno) {
+    die("MySQL, vithe yhteyden luonnissa: " .$my->connect_error);
+   }
+
+   $my->set_charset('utf8');
+   $sql = 'DELETE FROM 6552_kommentti WHERE kayttaja="'.$kayttaja.'"';
+
+   if($tulos = $my->query($sql)) {
+    header("Location: index.php");
+   } else {
+
+     echo '<p>Ei toimi!</p>';
+   }
+
+   $my->close();
+  }
+
 ?>
-<!doctype html>
+
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -72,10 +98,55 @@ h5 {
 </header>
 
 <article style="text-align:center">
-<br>
-<h1>Testi</h1>
+<br><br>
+
+       <div class="row">
+       <div class="small-12 columns">
+       <h2>Poista kommentteja</h2>
+       <br>
+       <form method="POST">
+
+           <label>Käyytäjänimi:</label>
+           <input type="text" name="kayttaja" value="<?=$_POST['kayttaja']?>" required><br>
+
+           <button class="primary button" type="submit" name="send" value="true">Poista kommentti</button>
+        </form>
+        </div>
+        </div>
 
 
+   <div class="row">
+     <div class="small-12 columns">
+
+       <?php
+    $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+    if($my->mysql_errno) {
+        die("MySQL, vithe yhteyden luonnissa: " .$my->connect_error);
+    }
+
+    $my->set_charset('utf8');
+    $result = $my->query('SELECT kayttaja, kommentti
+                          FROM 6552_kommentti
+                          ORDER BY `6552_kommentti`.`leima` DESC');
+
+    echo '<table>';
+    echo '<tr><th>Käyttäjä</th><th>Kommentti</th></tr>';
+
+    while($t = $result->fetch_object()) {
+    echo '<tr>';
+    echo '<td>'.$t->kayttaja.'</td>';
+    echo '<td style="width: 100%">'.$t->kommentti.'</td>';
+    echo '</tr>';
+    }
+    echo '</table>';
+    $my->close();
+    
+    ?>
+
+</div>
+</div>
+<br><br>
 </article>
 
 </div>
