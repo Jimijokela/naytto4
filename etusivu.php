@@ -3,12 +3,22 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Foundation | Welcome</title>
+<title>Bonsai | Tuotesivu</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
 h5 {
   text-align: center;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 </style>
 </head>
@@ -56,7 +66,7 @@ h5 {
 <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
 <li><a href="etusivu.php">Tuotesivu</a>
 
-</li>
+</xli>
 <li><a href="tietoa.php">Tietoa Meistä</a>
 
 </li>
@@ -67,8 +77,23 @@ h5 {
 </div>
 </header>
 
-<article>
-<br><br><br>
+<article style="text-align:center;">
+<br><br>
+<div class="row">
+<div class="small-12 medium-6 columns">
+<img src="bonsai.png" alt="Bonsai" width="100%">
+</div>
+<div class="small-12 medium-6 columns">
+<p>Bonsai-kauppamme myy laadukkaita bonsaipuita.
+<p>Bonsai kääntyy japanista suomenkielessä ruukkupuuksi. Nämä voivat kasvaa jopa oikean puun kokoiseksi ja tarvitsevat päivittäistä huolenpitoa.
+<br>
+<p>Myymme niitä niinkin ahaisiin hintaan kuin <strong>19,99€</strong>
+<p>Maksuun sisältyy lähetyskulut.
+<br><br>	
+<a href="ostosivu.php" class="button">Osta!</a>
+</div>
+</div>
+<br><br>
 </article>
 
 </div>
