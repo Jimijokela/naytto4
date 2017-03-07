@@ -68,7 +68,7 @@ h5 {
 <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
 <li><a href="etusivu.php">Tuotesivu</a>
 
-</xli>
+</li>
 <li><a href="tietoa.php">Tietoa Meistä</a>
 
 </li>
@@ -88,30 +88,30 @@ h5 {
 <div class="small-12 medium-6 columns">
 <form method="POST">
 <label>Etunimi</label>
-<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_GET['etunimi']?>">
+<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_POST['etunimi']?>">
 
 <label>Sukunimi</label>
-<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_GET['sukunimi']?>">
+<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_POST['sukunimi']?>">
 
 <label>Lähiosoite</label>
-<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_GET['lahiosoite']?>">
+<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_POST['lahiosoite']?>">
 
 <label>Puhelinnumero</label>
-<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_GET['puhelinnumero']?>">
+<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_POST['puhelinnumero']?>">
 
 <label>Sähköpostiosoite</label>
-<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_GET['email']?>">
+<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_POST['email']?>">
 
 <button class="button" type="submit" name="send" value="true">Osta!</button>
 
 <?php
-  $etunimi = $_GET['etunimi'];
-  $sukunimi = $_GET['sukunimi'];
-  $osoite = $_GET['lahiosoite'];
-  $puhelinnumero = $_GET['puhelinnumero'];
-  $email = $_GET['email'];
+  $etunimi = $_POST['etunimi'];
+  $sukunimi = $_POST['sukunimi'];
+  $osoite = $_POST['lahiosoite'];
+  $puhelinnumero = $_POST['puhelinnumero'];
+  $email = $_POST['email'];
   
-  $send = $_GET['send'];
+  $send = $_POST['send'];
 
   if($send=='true') {
 
@@ -121,8 +121,8 @@ h5 {
   die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
   }
   $my->set_charset('utf8');
-  $sql = 'INSERT INTO 6552_asiakastiedot (id, etunimi, sukunimi, osoite, puh, sahkoposti, leima)
-          VALUES("","'.$etunimi.'","'.$sukunimi.'","'.$osoite.'","'.$puhelinnumero.'","'.$email.'","")';
+  $sql = 'INSERT INTO 6552_asiakastiedot (etunimi, sukunimi, osoite, puh, sahkoposti)
+          VALUES("'.$etunimi.'","'.$sukunimi.'","'.$osoite.'","'.$puhelinnumero.'","'.$email.'")';
 
   if($tulos = $my->query($sql)) {
   header("Location: ostosivu.php");
