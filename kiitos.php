@@ -20,7 +20,7 @@ h5 {
     display: inline-block;
     font-size: 16px;
 }
-
+.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}
 
 </style>
 </head>
@@ -41,18 +41,17 @@ h5 {
       ga('foundation.send', 'pageview');
 
     </script>
-<style>.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}</style>
+
 <header>
  
 <br>
- 
 <div class="row">
 <div class="medium-4 columns">
 <img src="https://placehold.it/450x183&text=LOGO" alt="company logo">
 
 </div>
 <div class="medium-8 columns">
-<img src="https://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
+<img src="https://placehold.it/900x175&text=Responsive_Ads-ZURB_Playground/333" alt="advertisement for deep fried Twinkies">
 </div>
 </div>
  
@@ -81,16 +80,18 @@ h5 {
 
 <article style="text-align:center;">
 <br><br>
+<h3>Kiitos!</h3>
+<br><br>
 <div class="row">
 <div class="small-12 medium-6 columns">
-<img src="bonsai.png" alt="Bonsai" width="100%">
+<img src="bonsai.png" alt="Bonsai" style="width:100%;">
 </div>
 <div class="small-12 medium-6 columns">
 
 <h1>Kiitos tilauksestanne!</h1>
 <h2>Olemme teihin yhteydessä sähköpostilla ja puhelimitse</h2>
 
-<p>Palaa <a href="etusivu.php">Etusivulle</a></p>
+<p>Palaa <a href="etusivu.php">Tuotesivulle</a></p>
 
 </div>
 
@@ -98,8 +99,7 @@ h5 {
 <br><br>
 </article>
 
-</div>
-</div>
+
 <footer>
 <div class="row expanded callout secondary">
 <div class="large-4 columns">

@@ -81,9 +81,11 @@ h5 {
 
 <article style="text-align:center;">
 <br><br>
+<h3>Ostajan tiedot</h3>
+<br><br>
 <div class="row">
 <div class="small-12 medium-6 columns">
-<img src="bonsai.png" alt="Bonsai" width="100%">
+<img src="bonsai.png" alt="Bonsai" style="width:100%;">
 </div>
 <div class="small-12 medium-6 columns">
 

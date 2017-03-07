@@ -20,7 +20,7 @@ h5 {
     display: inline-block;
     font-size: 16px;
 }
-
+.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}
 
 </style>
 </head>
@@ -41,7 +41,7 @@ h5 {
       ga('foundation.send', 'pageview');
 
     </script>
-<style>.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}</style>
+
 <header>
  
 <br>
@@ -52,7 +52,7 @@ h5 {
 
 </div>
 <div class="medium-8 columns">
-<img src="https://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
+<img src="https://placehold.it/900x175&text=Responsive_Ads-ZURB_Playground/333" alt="advertisement for deep fried Twinkies">
 </div>
 </div>
  
@@ -90,19 +90,19 @@ h5 {
 <form method="POST">
 
 <label>Etunimi</label>
-<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_POST['etunimi']?>">
+<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_POST['etunimi']?>" required>
 
 <label>Sukunimi</label>
-<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_POST['sukunimi']?>">
+<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_POST['sukunimi']?>" required>
 
 <label>Lähiosoite</label>
-<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_POST['lahiosoite']?>">
+<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_POST['lahiosoite']?>" required>
 
 <label>Puhelinnumero</label>
-<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_POST['puhelinnumero']?>">
+<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_POST['puhelinnumero']?>" required>
 
 <label>Sähköpostiosoite</label>
-<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_POST['email']?>">
+<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_POST['email']?>" required>
 
 <button class="button" type="submit" name="send" value="true">Osta!</button>
 
@@ -134,14 +134,14 @@ h5 {
 
   }
 ?>
+</form>
 </div>
 
 </div>
 <br><br>
 </article>
 
-</div>
-</div>
+
 <footer>
 <div class="row expanded callout secondary">
 <div class="large-4 columns">
