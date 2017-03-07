@@ -104,11 +104,10 @@ table {
   </tr>
 </table>
 <br>
-<div>
-<div class="art-layout-cell" style="padding: 20px; width: 45%;"><iframe
-src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=..." width="400" height="300" style="border: 0;"></iframe></div>
-</div>
-
+<div class="art-layout-cell" 
+style="width: 99%; margin-left: auto; margin-right: auto; float: none;"><iframe
+src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=AIzaSyAj9ob6oUN_7hhm9AOTyw_fH5hxhOkWiAc" 
+></iframe></div>
 <br>
 </article>
 
