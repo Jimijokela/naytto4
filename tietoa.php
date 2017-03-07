@@ -48,7 +48,7 @@ table {
 
 </div>
 <div class="medium-8 columns">
-<img src="https://placehold.it/900x175&text=Responsive_Ads_-_ZURB_Playground/333" alt="advertisement for deep fried Twinkies">
+<img src="https://placehold.it/900x175&text=Responsive_Ads-ZURB_Playground/333" alt="advertisement for deep fried Twinkies">
 </div>
 </div>
 
