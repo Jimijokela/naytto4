@@ -72,7 +72,7 @@ h5 {
 <li><a href="tietoa.php">Tietoa Meistä</a>
 
 </li>
-<li><a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/naytto4/naytto4/hallinta/login.php">Hallinta</a>
+<li><a href="./hallinta/login.php">Hallinta</a>
 
 </li>
 </ul>
@@ -102,7 +102,7 @@ h5 {
 <label>Käyttäjä</label>
 <input type="text" name="kayttaja" placeholder="Käyttäjä" value="<?=$_POST['kayttaja']?>">
 <label>Kommentti</label>
-<input type="text" name="kommentti" placeholder="Kommenttisi" value="<?=$_POST['kommentti']?>">
+<textarea type="text" name="kommentti" placeholder="Kommenttisi" value="<?=$_POST['kommentti']?>"></textarea>
 <button class="button" type="submit" name="send" value="true">Kommentoi!</button>
 
 <?php
@@ -165,7 +165,7 @@ h5 {
   echo '</table>';
 
   $my->close();
-  $my1->close();
+
   ?>
 
 </div>
