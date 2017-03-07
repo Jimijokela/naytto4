@@ -1,9 +1,32 @@
+
+*** These modified files were found in JOE when it aborted on Tue Mar  7 11:04:25 2017
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+etusivu.php
+etusivu.php
+jo
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+*** File 'etusivu.php'
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Bonsai | Ostosivu</title>
+<title>Bonsai | Tuotesivu</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
@@ -20,8 +43,10 @@ h5 {
     display: inline-block;
     font-size: 16px;
 }
-.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}
-
+  table {border-collapse:collapse; table-layout:fixed; width:100%;}
+  table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
+  
+  .fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}
 </style>
 </head>
 <body>
@@ -81,38 +106,37 @@ h5 {
 
 <article style="text-align:center;">
 <br><br>
+<h3>Bonsai-tuotesivu</h3>
+<br><br>
 <div class="row">
 <div class="small-12 medium-6 columns">
-<img src="bonsai.png" alt="Bonsai" width="100%">
+<img src="bonsai.png" alt="Bonsai" style="width=auto;">
 </div>
 <div class="small-12 medium-6 columns">
-
+<p>Bonsai-kauppamme myy laadukkaita bonsaipuita.
+<p>Bonsai kääntyy japanista suomenkielessä ruukkupuuksi. Nämä voivat kasvaa jopa oikean puun kokoiseksi ja tarvitsevat päivittäistä huolenpitoa.
+<br>
+<p>Myymme niitä niinkin alhaiseen hintaan kuin <strong>19,99€</strong>
+<p>Maksuun sisältyy lähetyskulut.
+<br><br>	
+<a href="ostosivu.php" class="button">Osta!</a>
+</div>
+</div>
+<br><br>
+<div class="row">
+<div class="small-12 columns">
 <form method="POST">
-
-<label>Etunimi</label>
-<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_POST['etunimi']?>" required>
-
-<label>Sukunimi</label>
-<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_POST['sukunimi']?>" required>
-
-<label>Lähiosoite</label>
-<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_POST['lahiosoite']?>" required>
-
-<label>Puhelinnumero</label>
-<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_POST['puhelinnumero']?>" required>
-
-<label>Sähköpostiosoite</label>
-<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_POST['email']?>" required>
-
-<button class="button" type="submit" name="send" value="true">Osta!</button>
+<label>Käyttäjä</label>
+<input type="text" name="kayttaja" placeholder="Käyttäjä" value="<?=$_POST['kayttaja']?>">
+<label>Kommentti</label>
+<textarea name="kommentti" placeholder="Kommenttisi"></textarea>
+<button class="button" type="submit" name="send" value="true">Kommentoi!</button>
 
 <?php
-  $etunimi = $_POST['etunimi'];
-  $sukunimi = $_POST['sukunimi'];
-  $osoite = $_POST['lahiosoite'];
-  $puhelinnumero = $_POST['puhelinnumero'];
-  $email = $_POST['email'];
-  
+
+  $kayttaja = $_POST['kayttaja'];
+  $kommentti = $_POST['kommentti'];
+
   $send = $_POST['send'];
 
   if($send=='true') {
@@ -123,23 +147,59 @@ h5 {
   die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
   }
   $my->set_charset('utf8');
-  $sql = 'INSERT INTO 6552_asiakastiedot (etunimi, sukunimi, osoite, puh, sahkoposti)
-          VALUES("'.$etunimi.'","'.$sukunimi.'","'.$osoite.'","'.$puhelinnumero.'","'.$email.'")';
+  $sql = 'INSERT INTO 6552_kommentti (kayttaja, kommentti)
+          VALUES("'.$kayttaja.'","'.$kommentti.'")';
 
   if($tulos = $my->query($sql)) {
-  header("Location: kiitos.php");
+  header("Location: etusivu.php");
+  echo '<p>Lähetys onnistui!</p>';
   } else {
   echo '<p>Lähetyksessänne tapahtui virhe!</p>';
   }
 
   }
 ?>
+
+
 </form>
 </div>
+</div>
+<div class="row">
+<div class="small-12 columns">
+<?php
+  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+  if($my->mysql_errno) {
+  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
+  }
+
+  $my->set_charset('utf8');
+  $result = $my->query('SELECT kayttaja, kommentti, leima
+                        FROM 6552_kommentti
+                        ORDER BY leima DESC');
+
+  echo '<table>';
+  echo '<tr><th>Käyttäjä</th><th>Lähetetty</th><th>Kommentti</th></tr>';
+
+  while($t = $result->fetch_object()) {
+  echo '<tr>';
+  echo '<td>'.$t->kayttaja.'</td>';
+  echo '<td>'.$t->leima.'</td>';
+  echo '<td>'.$t->kommentti.'</td>';
+
+  echo '</tr>';
+  }
+  echo '</table>';
+
+  $my->close();
+
+  ?>
 
 </div>
-<br><br>
+</div>
+
 </article>
+
 
 
 <footer>
@@ -182,3 +242,30 @@ h5 {
 <script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
 </body>
 </html>
+
+*** File '(Unnamed)'
+d
+
+*** File '(Unnamed)'
+etusivu.php
+etusivu.php
+jo
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+ostosivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+etusivu.php
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

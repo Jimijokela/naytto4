@@ -22,6 +22,8 @@ h5 {
 }
   table {border-collapse:collapse; table-layout:fixed; width:100%;}
   table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
+  
+  .fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}
 </style>
 </head>
 <body>
@@ -41,7 +43,7 @@ h5 {
       ga('foundation.send', 'pageview');
 
     </script>
-<style>.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}</style>
+
 <header>
  
 <br>
@@ -52,7 +54,7 @@ h5 {
 
 </div>
 <div class="medium-8 columns">
-<img src="https://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
+<img src="https://placehold.it/900x175&text=Responsive_Ads-ZURB_Playground/333" alt="advertisement for deep fried Twinkies">
 </div>
 </div>
  
@@ -68,7 +70,7 @@ h5 {
 <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
 <li><a href="etusivu.php">Tuotesivu</a>
 
-</xli>
+</li>
 <li><a href="tietoa.php">Tietoa Meistä</a>
 
 </li>
@@ -81,15 +83,17 @@ h5 {
 
 <article style="text-align:center;">
 <br><br>
+<h3>Bonsai-tuotesivu</h3>
+<br><br>
 <div class="row">
 <div class="small-12 medium-6 columns">
-<img src="bonsai.png" alt="Bonsai" width="100%">
+<img src="bonsai.png" alt="Bonsai" style="width:100%;">
 </div>
 <div class="small-12 medium-6 columns">
 <p>Bonsai-kauppamme myy laadukkaita bonsaipuita.
 <p>Bonsai kääntyy japanista suomenkielessä ruukkupuuksi. Nämä voivat kasvaa jopa oikean puun kokoiseksi ja tarvitsevat päivittäistä huolenpitoa.
 <br>
-<p>Myymme niitä niinkin ahaisiin hintaan kuin <strong>19,99€</strong>
+<p>Myymme niitä niinkin alhaiseen hintaan kuin <strong>19,99€</strong>
 <p>Maksuun sisältyy lähetyskulut.
 <br><br>	
 <a href="ostosivu.php" class="button">Osta!</a>
@@ -102,7 +106,7 @@ h5 {
 <label>Käyttäjä</label>
 <input type="text" name="kayttaja" placeholder="Käyttäjä" value="<?=$_POST['kayttaja']?>">
 <label>Kommentti</label>
-<textarea type="text" name="kommentti" placeholder="Kommenttisi" value="<?=$_POST['kommentti']?>"></textarea>
+<textarea name="kommentti" placeholder="Kommenttisi"></textarea>
 <button class="button" type="submit" name="send" value="true">Kommentoi!</button>
 
 <?php
@@ -173,8 +177,8 @@ h5 {
 
 </article>
 
-</div>
-</div>
+
+
 <footer>
 <div class="row expanded callout secondary">
 <div class="large-4 columns">
