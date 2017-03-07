@@ -105,12 +105,11 @@ table {
 </table>
 <br>
 <div class="art-layout-cell" 
-style="width: 99%; margin-left: auto; margin-right: auto; float: none;"><iframe
+style="width: 99%; margin-left: auto; margin-right: auto; float: middle;"><iframe
 src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=AIzaSyAj9ob6oUN_7hhm9AOTyw_fH5hxhOkWiAc" 
-></iframe></div>
+width="300" height="200"></iframe></div>
 <br>
 </article>
-
 <footer>
 <div class="row expanded callout secondary">
 <div class="large-4 columns">

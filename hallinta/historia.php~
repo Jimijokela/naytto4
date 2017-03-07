@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Foundation | Welcome</title>
+<title>Bonsai | Hallinta</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
@@ -99,18 +99,22 @@ table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
     }
 
     $my->set_charset('utf8');
-    $result = $my->query('SELECT kayttaja, kommentti, leima
+    $result = $my->query('SELECT etunimi, sukunimi, osoite, puh, sahkoposti, leima
                           FROM 6552_asiakastiedot
-                          ORDER BY `6552_kommentti`.`leima` DESC');
+                          ORDER BY `6552_asiakastiedot`.`leima` DESC');
 
     echo '<table>';
-    echo '<tr><th>Käyttäjä</th><th>Julkaisuaika</th><th>Kommentti</th></tr>';
+    echo
+    '<tr><th>Etunimi</th><th>Sukunimi</th><th>Osoite</th><th>Puhelin</th><th>Sähköposti</th><th>Päivämäärä</th></tr>';
 
     while($t = $result->fetch_object()) {
     echo '<tr>';
-    echo '<td>'.$t->kayttaja.'</td>';
-    echo '<td>'.$t->leima.'</td>'; 
-    echo '<td>'.$t->kommentti.'</td>';
+    echo '<td>'.$t->etunimi.'</td>';
+    echo '<td>'.$t->sukunimi.'</td>'; 
+    echo '<td>'.$t->osoite.'</td>';
+    echo '<td>'.$t->puh.'</td>';
+    echo '<td>'.$t->sahkoposti.'</td>';
+    echo '<td>'.$t->leima.'</td>';
     echo '</tr>';
     }
     echo '</table>';
