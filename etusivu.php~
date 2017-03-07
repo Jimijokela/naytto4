@@ -20,6 +20,8 @@ h5 {
     display: inline-block;
     font-size: 16px;
 }
+  table {border-collapse:collapse; table-layout:fixed; width:100%;}
+  table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
 </style>
 </head>
 <body>
@@ -94,6 +96,81 @@ h5 {
 </div>
 </div>
 <br><br>
+<div class="row">
+<div class="small-12 columns">
+<form method="POST">
+<label>Käyttäjä</label>
+<input type="text" name="kayttaja" placeholder="Käyttäjä" value="<?=$_POST['kayttaja']?>">
+<label>Kommentti</label>
+<input type="text" name="kommentti" placeholder="Kommenttisi" value="<?=$_POST['kommentti']?>">
+<button class="button" type="submit" name="send" value="true">Kommentoi!</button>
+
+<?php
+
+  $kayttaja = $_POST['kayttaja'];
+  $kommentti = $_POST['kommentti'];
+
+  $send = $_POST['send'];
+
+  if($send=='true') {
+
+  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+  if($my->mysql_errno) {
+  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
+  }
+  $my->set_charset('utf8');
+  $sql = 'INSERT INTO 6552_kommentti (kayttaja, kommentti)
+          VALUES("'.$kayttaja.'","'.$kommentti.'")';
+
+  if($tulos = $my->query($sql)) {
+  header("Location: etusivu.php");
+  echo '<p>Lähetys onnistui!</p>';
+  } else {
+  echo '<p>Lähetyksessänne tapahtui virhe!</p>';
+  }
+
+  }
+?>
+
+
+</form>
+</div>
+</div>
+<div class="row">
+<div class="small-12 columns">
+<?php
+  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+  if($my->mysql_errno) {
+  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
+  }
+
+  $my->set_charset('utf8');
+  $result = $my->query('SELECT kayttaja, kommentti, leima
+                        FROM 6552_kommentti
+                        ORDER BY leima DESC');
+
+  echo '<table>';
+  echo '<tr><th>Käyttäjä</th><th>Lähetetty</th><th>Kommentti</th></tr>';
+
+  while($t = $result->fetch_object()) {
+  echo '<tr>';
+  echo '<td>'.$t->kayttaja.'</td>';
+  echo '<td>'.$t->leima.'</td>';
+  echo '<td>'.$t->kommentti.'</td>';
+
+  echo '</tr>';
+  }
+  echo '</table>';
+
+  $my->close();
+  $my1->close();
+  ?>
+
+</div>
+</div>
+
 </article>
 
 </div>
