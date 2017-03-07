@@ -87,78 +87,11 @@ h5 {
 </div>
 <div class="small-12 medium-6 columns">
 
-<form method="POST">
-<label>Etunimi</label>
-<<<<<<< HEAD
-<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_GET['etunimi']?>">
+<h1>Kiitos tilauksestanne!</h1>
+<h2>Olemme teihin yhteydessä sähköpostilla ja puhelimitse</h2>
 
-<label>Sukunimi</label>
-<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_GET['sukunimi']?>">
+<p>Palaa <a href="etusivu.php">Etusivulle</a></p>
 
-<label>Lähiosoite</label>
-<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_GET['lahiosoite']?>">
-
-<label>Puhelinnumero</label>
-<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_GET['puhelinnumero']?>">
-
-<label>Sähköpostiosoite</label>
-<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_GET['email']?>">
-=======
-<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_POST['etunimi']?>">
-
-<label>Sukunimi</label>
-<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_POST['sukunimi']?>">
-
-<label>Lähiosoite</label>
-<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_POST['lahiosoite']?>">
-
-<label>Puhelinnumero</label>
-<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_POST['puhelinnumero']?>">
-
-<label>Sähköpostiosoite</label>
-<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_POST['email']?>">
->>>>>>> f79c1199a4c4e6b375e43249976e8aa901742ba9
-
-<button class="button" type="submit" name="send" value="true">Osta!</button>
-
-<?php
-<<<<<<< HEAD
-  $etunimi = $_GET['etunimi'];
-  $sukunimi = $_GET['sukunimi'];
-  $osoite = $_GET['lahiosoite'];
-  $puhelinnumero = $_GET['puhelinnumero'];
-  $email = $_GET['email'];
-  
-  $send = $_GET['send'];
-=======
-  $etunimi = $_POST['etunimi'];
-  $sukunimi = $_POST['sukunimi'];
-  $osoite = $_POST['lahiosoite'];
-  $puhelinnumero = $_POST['puhelinnumero'];
-  $email = $_POST['email'];
-  
-  $send = $_POST['send'];
->>>>>>> f79c1199a4c4e6b375e43249976e8aa901742ba9
-
-  if($send=='true') {
-
-  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
-
-  if($my->mysql_errno) {
-  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
-  }
-  $my->set_charset('utf8');
-  $sql = 'INSERT INTO 6552_asiakastiedot (etunimi, sukunimi, osoite, puh, sahkoposti)
-          VALUES("'.$etunimi.'","'.$sukunimi.'","'.$osoite.'","'.$puhelinnumero.'","'.$email.'")';
-
-  if($tulos = $my->query($sql)) {
-  header("Location: kiitos.php");
-  } else {
-  echo '<p>Lähetyksessänne tapahtui virhe!</p>';
-  }
-
-  }
-?>
 </div>
 
 </div>

@@ -86,7 +86,9 @@ h5 {
 <img src="bonsai.png" alt="Bonsai" width="100%">
 </div>
 <div class="small-12 medium-6 columns">
+
 <form method="POST">
+
 <label>Etunimi</label>
 <input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_POST['etunimi']?>">
 
@@ -125,8 +127,7 @@ h5 {
           VALUES("'.$etunimi.'","'.$sukunimi.'","'.$osoite.'","'.$puhelinnumero.'","'.$email.'")';
 
   if($tulos = $my->query($sql)) {
-  header("Location: ostosivu.php");
-  echo '<p>Lähetys onnistui!</p>';
+  header("Location: kiitos.php");
   } else {
   echo '<p>Lähetyksessänne tapahtui virhe!</p>';
   }

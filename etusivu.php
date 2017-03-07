@@ -102,7 +102,7 @@ h5 {
 <label>Käyttäjä</label>
 <input type="text" name="kayttaja" placeholder="Käyttäjä" value="<?=$_POST['kayttaja']?>">
 <label>Kommentti</label>
-<input type="text" name="kommentti" placeholder="Kommenttisi" value="<?=$_POST['kommentti']?>">
+<textarea type="text" name="kommentti" placeholder="Kommenttisi" value="<?=$_POST['kommentti']?>"></textarea>
 <button class="button" type="submit" name="send" value="true">Kommentoi!</button>
 
 <?php
@@ -165,7 +165,7 @@ h5 {
   echo '</table>';
 
   $my->close();
-  $my1->close();
+
   ?>
 
 </div>
