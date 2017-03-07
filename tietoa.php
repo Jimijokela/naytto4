@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Foundation | Welcome</title>
+<title>Bonsai | Tietoa Meistä</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
@@ -18,6 +18,7 @@ table {
   margin-right: auto;
   float: none;
 }
+
 </style>
 <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -104,10 +105,9 @@ table {
   </tr>
 </table>
 <br>
-<div class="art-layout-cell" 
-style="width: 99%; margin-left: auto; margin-right: auto; float: middle;"><iframe
-src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=AIzaSyAj9ob6oUN_7hhm9AOTyw_fH5hxhOkWiAc" 
-width="300" height="200"></iframe></div>
+<div class="art-layout-cell" style="width: 99%; margin-left: auto; margin-right: auto; display: block;">
+<iframe src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=AIzaSyAj9ob6oUN_7hhm9AOTyw_fH5hxhOkWiAc" width="300" height="200"></iframe>
+</div>
 <br>
 </article>
 <footer>
