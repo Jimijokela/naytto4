@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Foundation | Welcome</title>
+<title>Bonsai | Hallinta</title>
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
@@ -17,6 +17,8 @@ h5 {
 
 table {border-collapse:collapse; table-layout:fixed; width:100%;}
 table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
+
+.fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}
 </style>
 </head>
 <body>
@@ -48,13 +50,13 @@ table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
 
 </div>
 <div class="medium-8 columns">
-<img src="https://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
+<img src="https://placehold.it/900x175&text=ResponsiveAds-ZURBPlayground/333" alt="advertisement for deep fried Twinkies">
 </div>
 </div>
 
 <br>
 
-<h5>Bonsai-kauppa</h5>
+
 <br>
 <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
 <button class="menu-icon" type="button" data-toggle></button>
@@ -127,8 +129,7 @@ table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
 <br><br>
 </article>
 
-</div>
-</div>
+
 <footer>
 <div class="row expanded callout secondary">
 <div class="large-4 columns">
