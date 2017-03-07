@@ -104,6 +104,7 @@ table {
   </tr>
 </table>
 <br>
+<<<<<<< HEAD
 <div class="art-layout-cell" 
 style="width: 99%; margin-left: auto; margin-right: auto; float: none;"><iframe
 src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=
@@ -111,6 +112,14 @@ AIzaSyAj9ob6oUN_7hhm9AOTyw_fH5hxhOkWiAc"
 width="400" height="300"></iframe></div>
 <br>
 margin-left: auto; margin-right: auto; float: none;
+=======
+<div>
+<div class="art-layout-cell" style="padding: 20px; width: 45%;"><iframe
+src="https://www.google.com/maps/embed/v1/place?q=ajurintie%202&key=..." width="400" height="300" style="border: 0;"></iframe></div>
+</div>
+
+<br>
+>>>>>>> 3c11a14aa8b3b7dad08e068dec36e0e8f62c56b6
 </article>
 
 <footer>

@@ -62,14 +62,14 @@ href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/naytto4/naytto4/etusivu.php
 <li><a href="tietoa.php">Tietoa Meistä</a>
 
 </li>
-<li><a href="hallinta.php">Hallinta</a>
+<li><a href="login.php">Hallinta</a>
 
 </li>
 </ul>
 </div>
 </header>
 
-<article>
+<article style="text-align: center;">
 <br>
        <div class="row">
              <div class="medium-12 columns">
@@ -82,16 +82,16 @@ href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/naytto4/naytto4/etusivu.php
 
          <form action="index.php" method="post">
            <label>Tunnus:</label>
-         <input type="text" name="login" required><br><br>
+         <input style="margin:auto; position: relative;" type="text" name="login" required><br>
            <label>Salasana:</label>
-         <input type="password" name="passwd" required><br><br>
-         <button class="button" name="btn" value="1">Kirjaudu</button>
+         <input style="margin:auto; position: relative;" type="password" name="passwd" required><br><br>
+         <button class="button" name="btn" value="1">Kirjaudu sisään</button>
        </form>
 
        </div>
       </div>
 
-
+<br>
 </article>
 
 </div>

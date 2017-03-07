@@ -1,30 +1,5 @@
 <?php
   include("config.php");
-
-  $send = $_POST['send'];
-  $kayttaja = $_POST['kayttaja'];
-
-  if($send=='true') {
-
-   $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
-
-   if($my->mysql_errno) {
-    die("MySQL, vithe yhteyden luonnissa: " .$my->connect_error);
-   }
-
-   $my->set_charset('utf8');
-   $sql = 'DELETE FROM 6552_kommentti WHERE kayttaja="'.$kayttaja.'"';
-
-   if($tulos = $my->query($sql)) {
-    header("Location: index.php");
-   } else {
-
-     echo '<p>Ei toimi!</p>';
-   }
-
-   $my->close();
-  }
-
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +65,7 @@ table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
 <li><a href="index.php">Poista tietoja</a>
 
 </li>
-<li><a href="poista.php">Ostohistoriaa</a>
+<li><a href="historia.php">Ostohistoria</a>
 
 </li>
 <li><a style="color: green" href="?kill=user">Kirjaudu ulos</a>
@@ -105,19 +80,14 @@ table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
 
        <div class="row">
        <div class="small-12 columns">
-       <h2>Poista kommentteja</h2>
+       <h2>Ostohistoria</h2>
        <br>
-       <form method="POST">
 
-           <label>Käyytäjänimi:</label>
-           <input style="margin:auto; position: relative;" type="text" name="kayttaja" value="<?=$_POST['kayttaja']?>" required><br>
-
-           <button class="primary button" type="submit" name="send" value="true">Poista kommentti</button>
-        </form>
-        </div>
-        </div>
+       </div>
+       </div>
 
         <br>
+
    <div class="row">
      <div class="small-12 columns">
 
@@ -129,18 +99,22 @@ table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
     }
 
     $my->set_charset('utf8');
-    $result = $my->query('SELECT kayttaja, kommentti, leima
-                          FROM 6552_kommentti
-                          ORDER BY `6552_kommentti`.`leima` DESC');
+    $result = $my->query('SELECT etunimi, sukunimi, osoite, puh, sahkoposti, leima
+                          FROM 6552_asiakastiedot
+                          ORDER BY `6552_asiakastiedot`.`leima` DESC');
 
     echo '<table>';
-    echo '<tr><th>Käyttäjä</th><th>Julkaisuaika</th><th>Kommentti</th></tr>';
+    echo
+    '<tr><th>Etunimi</th><th>Sukunimi</th><th>Osoite</th><th>Puhelin</th><th>Sähköposti</th><th>Päivämäärä</th></tr>';
 
     while($t = $result->fetch_object()) {
     echo '<tr>';
-    echo '<td>'.$t->kayttaja.'</td>';
-    echo '<td>'.$t->leima.'</td>'; 
-    echo '<td>'.$t->kommentti.'</td>';
+    echo '<td>'.$t->etunimi.'</td>';
+    echo '<td>'.$t->sukunimi.'</td>'; 
+    echo '<td>'.$t->osoite.'</td>';
+    echo '<td>'.$t->puh.'</td>';
+    echo '<td>'.$t->sahkoposti.'</td>';
+    echo '<td>'.$t->leima.'</td>';
     echo '</tr>';
     }
     echo '</table>';
