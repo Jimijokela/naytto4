@@ -53,7 +53,7 @@ table {
 
 <br>
 
-<h5>Bonsai-kauppa</h5>
+
 <br>
 <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
 <button class="menu-icon" type="button" data-toggle></button>
