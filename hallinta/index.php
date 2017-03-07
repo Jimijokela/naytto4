@@ -39,6 +39,9 @@
 h5 {
   text-align: center;
 }
+
+table {border-collapse:collapse; table-layout:fixed; width:100%;}
+table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
 </style>
 </head>
 <body>
@@ -87,7 +90,7 @@ h5 {
 <li><a href="index.php">Poista tietoja</a>
 
 </li>
-<li><a href="poista.php">Ostohistoriaa</a>
+<li><a href="historia.php">Ostohistoria</a>
 
 </li>
 <li><a style="color: green" href="?kill=user">Kirjaudu ulos</a>
@@ -107,18 +110,18 @@ h5 {
        <form method="POST">
 
            <label>Käyytäjänimi:</label>
-           <input type="text" name="kayttaja" value="<?=$_POST['kayttaja']?>" required><br>
+           <input style="margin:auto; position: relative;" type="text" name="kayttaja" value="<?=$_POST['kayttaja']?>" required><br>
 
            <button class="primary button" type="submit" name="send" value="true">Poista kommentti</button>
         </form>
         </div>
         </div>
 
-
+        <br>
    <div class="row">
      <div class="small-12 columns">
 
-       <?php
+    <?php
     $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
 
     if($my->mysql_errno) {
@@ -126,17 +129,18 @@ h5 {
     }
 
     $my->set_charset('utf8');
-    $result = $my->query('SELECT kayttaja, kommentti
+    $result = $my->query('SELECT kayttaja, kommentti, leima
                           FROM 6552_kommentti
                           ORDER BY `6552_kommentti`.`leima` DESC');
 
     echo '<table>';
-    echo '<tr><th>Käyttäjä</th><th>Kommentti</th></tr>';
+    echo '<tr><th>Käyttäjä</th><th>Julkaisuaika</th><th>Kommentti</th></tr>';
 
     while($t = $result->fetch_object()) {
     echo '<tr>';
     echo '<td>'.$t->kayttaja.'</td>';
-    echo '<td style="width: 100%">'.$t->kommentti.'</td>';
+    echo '<td>'.$t->leima.'</td>'; 
+    echo '<td>'.$t->kommentti.'</td>';
     echo '</tr>';
     }
     echo '</table>';

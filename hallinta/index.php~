@@ -13,13 +13,13 @@
    }
 
    $my->set_charset('utf8');
-   $sql = 'DELETE FROM 6552_kommentti WHERE kayttaja='.$kayttaja.'';
+   $sql = 'DELETE FROM 6552_kommentti WHERE kayttaja="'.$kayttaja.'"';
 
    if($tulos = $my->query($sql)) {
     header("Location: index.php");
    } else {
 
-     echo '<p>Jokin meni pieleen!</p>';
+     echo '<p>Ei toimi!</p>';
    }
 
    $my->close();
@@ -39,6 +39,9 @@
 h5 {
   text-align: center;
 }
+
+table {border-collapse:collapse; table-layout:fixed; width:100%;}
+table td {border:solid 1px lightgrey; width:100px; word-wrap:break-word;}
 </style>
 </head>
 <body>
@@ -101,19 +104,53 @@ h5 {
 <br><br>
 
        <div class="row">
-       <div class="col-md-12 lomake">
+       <div class="small-12 columns">
        <h2>Poista kommentteja</h2>
        <br>
-       <form>
+       <form method="POST">
 
            <label>Käyytäjänimi:</label>
-           <input type="text" name="kayttaja" value="<?=$_POST['kayttaja']?>" required><br>
+           <input style="margin:auto; position: relative;" type="text" name="kayttaja" value="<?=$_POST['kayttaja']?>" required><br>
 
            <button class="primary button" type="submit" name="send" value="true">Poista kommentti</button>
         </form>
         </div>
         </div>
 
+        <br>
+   <div class="row">
+     <div class="small-12 columns">
+
+    <?php
+    $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+    if($my->mysql_errno) {
+        die("MySQL, vithe yhteyden luonnissa: " .$my->connect_error);
+    }
+
+    $my->set_charset('utf8');
+    $result = $my->query('SELECT kayttaja, kommentti, leima
+                          FROM 6552_kommentti
+                          ORDER BY `6552_kommentti`.`leima` DESC');
+
+    echo '<table>';
+    echo '<tr><th>Käyttäjä</th><th>Julkaisuaika</th><th>Kommentti</th></tr>';
+
+    while($t = $result->fetch_object()) {
+    echo '<tr>';
+    echo '<td>'.$t->kayttaja.'</td>';
+    echo '<td>'.$t->leima.'</td>'; 
+    echo '<td>'.$t->kommentti.'</td>';
+    echo '</tr>';
+    }
+    echo '</table>';
+    $my->close();
+    
+    ?>
+
+</div>
+</div>
+<br><br>
 </article>
 
 </div>

@@ -20,6 +20,8 @@ h5 {
     display: inline-block;
     font-size: 16px;
 }
+
+
 </style>
 </head>
 <body>
@@ -80,18 +82,59 @@ h5 {
 <article style="text-align:center;">
 <br><br>
 <div class="row">
-<div class="small-12 medium-4 columns">
+<div class="small-12 medium-6 columns">
 <img src="bonsai.png" alt="Bonsai" width="100%">
 </div>
-<div class="small-12 medium-8 columns">
-<p>Bonsai-kauppamme myy laadukkaita bonsaipuita.
-<p>
-<br>
-<p>Myymme niitä niinkin ahaisiin hintaan kuin <strong>19,99€</strong>
-<p>Maksuun sisältyy lähetyskulut.
-<br><br>	
-<a href="ostosivu.php" class="button">Osta!</a>
+<div class="small-12 medium-6 columns">
+<form method="POST">
+<label>Etunimi</label>
+<input type="text" name="etunimi" placeholder="Etunimi" value="<?=$_GET['etunimi']?>">
+
+<label>Sukunimi</label>
+<input type="text" name="sukunimi" placeholder="Sukunimi" value="<?=$_GET['sukunimi']?>">
+
+<label>Lähiosoite</label>
+<input type="text" name="lahiosoite" placeholder="Lähiosoite" value="<?=$_GET['lahiosoite']?>">
+
+<label>Puhelinnumero</label>
+<input type="text" name="puhelinnumero" placeholder="Puhelinnumero" value="<?=$_GET['puhelinnumero']?>">
+
+<label>Sähköpostiosoite</label>
+<input type="email" name="email" placeholder="Sähköpostiosoite" value="<?=$_GET['email']?>">
+
+<button class="button" type="submit" name="send" value="true">Osta!</button>
+
+<?php
+  $etunimi = $_GET['etunimi'];
+  $sukunimi = $_GET['sukunimi'];
+  $osoite = $_GET['lahiosoite'];
+  $puhelinnumero = $_GET['puhelinnumero'];
+  $email = $_GET['email'];
+  
+  $send = $_GET['send'];
+
+  if($send=='true') {
+
+  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+  if($my->mysql_errno) {
+  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
+  }
+  $my->set_charset('utf8');
+  $sql = 'INSERT INTO 6552_asiakastiedot (id, etunimi, sukunimi, osoite, puh, sahkoposti, leima)
+          VALUES("","'.$etunimi.'","'.$sukunimi.'","'.$osoite.'","'.$puhelinnumero.'","'.$email.'","")';
+
+  if($tulos = $my->query($sql)) {
+  header("Location: ostosivu.php");
+  echo '<p>Lähetys onnistui!</p>';
+  } else {
+  echo '<p>Lähetyksessänne tapahtui virhe!</p>';
+  }
+
+  }
+?>
 </div>
+
 </div>
 <br><br>
 </article>

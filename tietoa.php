@@ -67,7 +67,7 @@ table {
 <li><a href="tietoa.php">Tietoa Meistä</a>
 
 </li>
-<li><a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/naytto4/naytto4/hallinta/login.php">Hallinta</a>
+<li><a href="./hallinta/login.php">Hallinta</a>
 
 </li>
 </ul>
